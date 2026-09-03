@@ -1,0 +1,80 @@
+name: A block is still showing
+description: An AI Overview, ad, or other section the extension should hide is still on the page
+title: "[Still showing] "
+labels: ["not hidden"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is almost always Google renaming a section. The fix takes a minute —
+        but only if I can see the exact wording Google is using for you.
+
+        **The heading text below is the important field.** Everything else is quick.
+
+  - type: dropdown
+    id: block
+    attributes:
+      label: Which block is still showing?
+      options:
+        - AI Overview
+        - AI Mode (the tab or button)
+        - Sponsored results (Pro)
+        - '"People also ask" (Pro)'
+        - Video carousel (Pro)
+        - '"Discussions and forums" (Pro)'
+        - An AI answer on Bing / DuckDuckGo / Brave (Pro)
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: heading
+    attributes:
+      label: The exact heading text on that block
+      description: >
+        Copy it character for character, in your language. For example
+        "AI Overview", "Prezentare generală generată de AI", "KI-Übersicht".
+        Right-click the block → Inspect if it is not plain text.
+      placeholder: e.g. Prezentare generală generată de AI
+    validations:
+      required: true
+
+  - type: input
+    id: query
+    attributes:
+      label: What did you search for?
+      description: A search that reproduces it, so I can see the same page.
+      placeholder: e.g. cum functioneaza o eclipsa
+    validations:
+      required: true
+
+  - type: input
+    id: domain
+    attributes:
+      label: Which Google domain?
+      placeholder: e.g. google.ro
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: What language is your Google interface in?
+      placeholder: e.g. Romanian
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: chrome://extensions → the number under the extension name
+      placeholder: e.g. 1.1.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image in. A shot of the block that is still showing helps a lot.
