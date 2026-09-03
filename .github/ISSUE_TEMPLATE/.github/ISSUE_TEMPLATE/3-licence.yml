@@ -1,0 +1,41 @@
+name: Licence or purchase
+description: A key that won't activate, a refund, or a billing question
+title: "[Licence] "
+labels: ["licence"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never post your licence key in a public issue.** Describe the problem
+        here and I'll follow up by email if I need the key.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's the problem?
+      options:
+        - My key won't activate
+        - I bought Pro but the features are still locked
+        - I want a refund
+        - Moving to a new computer
+        - Something else
+    validations:
+      required: true
+
+  - type: input
+    id: message
+    attributes:
+      label: What exactly does the settings page say?
+      description: The message shown under the Activate button, word for word.
+      placeholder: e.g. That key was not recognised. Check it and try again.
+
+  - type: input
+    id: email
+    attributes:
+      label: The email you bought with
+      description: Only so I can find the purchase — never post the key itself.
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: Anything else
