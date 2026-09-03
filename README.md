@@ -3,7 +3,7 @@
 A Chrome extension that gives you Google's classic web results back — ten blue
 links, no AI Overview, no AI Mode.
 
-**[Install it free from the Chrome Web Store →](#)**
+****[Install it free from the Chrome Web Store →](https://chromewebstore.google.com/detail/bjdeogggojilabcimjclcgmdcedlcifi)****
 
 ---
 
