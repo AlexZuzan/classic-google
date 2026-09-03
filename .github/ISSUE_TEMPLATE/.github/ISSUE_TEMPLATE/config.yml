@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature request
+    url: https://github.com/AlexZuzan/classic-google/discussions
+    about: Something you'd like the extension to hide or do — start a discussion instead.
