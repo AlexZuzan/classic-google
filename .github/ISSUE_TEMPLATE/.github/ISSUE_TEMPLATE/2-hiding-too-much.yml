@@ -1,0 +1,60 @@
+name: Something is being hidden that shouldn't be
+description: A normal result or part of the page disappeared
+title: "[Hiding too much] "
+labels: ["over-hiding"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the more serious kind of bug, so thank you for reporting it.
+        Turn the extension off with the toolbar switch while you wait for a fix —
+        that restores the page immediately.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What disappeared?
+      description: What you expected to see and what was missing instead.
+    validations:
+      required: true
+
+  - type: input
+    id: query
+    attributes:
+      label: What did you search for?
+    validations:
+      required: true
+
+  - type: input
+    id: domain
+    attributes:
+      label: Which Google domain?
+      placeholder: e.g. google.ro
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: settings
+    attributes:
+      label: Which options do you have switched on?
+      options:
+        - label: Always classic results
+        - label: Just hide the AI blocks
+        - label: Hide sponsored results (Pro)
+        - label: Hide "People also ask" (Pro)
+        - label: Hide video carousels (Pro)
+        - label: Hide "Discussions and forums" (Pro)
+        - label: Also clean Bing, DuckDuckGo & Brave (Pro)
+
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      placeholder: e.g. 1.1.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
